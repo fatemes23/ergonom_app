@@ -5,7 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:id="@+id/reletivelayoutinContentmain">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:background="@color/colorPrimary"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/lightblue"
+        app:tabSelectedTextColor="@color/lightblue"
+        >
+
+    </android.support.design.widget.TabLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/tabLayout"
+        android:background="@drawable/toolbar_dropshadow" />
+    <FrameLayout
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout"
+        tools:layout_editor_absoluteX="8dp"
+        android:background="@color/white2"/>
 
 
 
