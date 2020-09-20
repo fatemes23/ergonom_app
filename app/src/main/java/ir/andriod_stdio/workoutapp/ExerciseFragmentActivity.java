@@ -1,27 +1,28 @@
 package ir.andriod_stdio.workoutapp;
 
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.sql.Time;
 import java.util.ArrayList;
 
-
-public  class ExerciseFragmentActivity extends Fragment  {
+@SuppressWarnings("unchecked")
+public  class ExerciseFragmentActivity extends Fragment implements ExerciseItemClickLIstener  {
 
     static ArrayList<OneExercise> exersices;
 
     static RecyclerView recyclerView;
     static ExerciseAdaptor exerciseAdaptor;
-
-
-
 
     @Nullable
     @Override
@@ -39,15 +40,19 @@ public  class ExerciseFragmentActivity extends Fragment  {
         recyclerView.setLayoutManager(layoutManager);
         exerciseAdaptor = new ExerciseAdaptor(exersices,this.getActivity());
         recyclerView.setAdapter(exerciseAdaptor);
-        //devider for recycle view
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
-                layoutManager.getOrientation());
-        recyclerView.addItemDecoration(dividerItemDecoration);
+        exerciseAdaptor.setClickListener(this);
+
+//        //devider for recycle view
+//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+//                layoutManager.getOrientation());
+//        recyclerView.addItemDecoration(dividerItemDecoration);
 
         ///_____swipe controlle
 //        SwipController swipeController = new SwipController(taskAdapter);
 //        ItemTouchHelper itemTouchhelper = new ItemTouchHelper(swipeController);
 //        itemTouchhelper.attachToRecyclerView(recyclerView);
+
+
 
         return  view;
     }
@@ -122,6 +127,14 @@ public  class ExerciseFragmentActivity extends Fragment  {
     }
 
 
-
-
+    @Override
+    public void onClick(View v, int position) {
+        final OneExercise oneExercise = exersices.get(position);
+        Intent i = new Intent(getContext(), TimerDownCount.class);
+        i.putExtra("exerciseTitle", oneExercise.getExerciseTile());
+        i.putExtra("exerciseDescription", oneExercise.getExersiceExplanation());
+        i.putExtra("exerciseId", Integer.toString(oneExercise.getExerciseid()));
+        i.putExtra("exerciseDuration", oneExercise.getExerciseDuration());
+        startActivity(i);
+    }
 }

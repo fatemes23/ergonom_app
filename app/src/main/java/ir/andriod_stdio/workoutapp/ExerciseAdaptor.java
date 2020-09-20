@@ -17,6 +17,8 @@ public class ExerciseAdaptor extends RecyclerView.Adapter<ExerciseAdaptor.Exerci
     List<OneExercise> exercises;
     FragmentActivity mainActivity;
 
+    ExerciseItemClickLIstener clickListener;
+
     public ExerciseAdaptor(List<OneExercise> exercises, FragmentActivity mainActivity) {
         this.exercises = exercises;
         this.mainActivity = mainActivity;
@@ -30,10 +32,10 @@ public class ExerciseAdaptor extends RecyclerView.Adapter<ExerciseAdaptor.Exerci
     }
 
     @Override
-    public void onBindViewHolder(final ExerciseViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(final ExerciseViewHolder viewHolder, final int position) {
 
         //viewHolder.icon.setImageResource(todoList.get(i).iconRsc);
-        OneExercise exercise = exercises.get(i);
+        OneExercise exercise = exercises.get(position);
         viewHolder.title.setText(exercise.getExerciseTile());
         viewHolder.body.setText(exercise.getExersiceExplanation());
         String nameOfPic = exercise.getExercisePicture();
@@ -46,10 +48,14 @@ public class ExerciseAdaptor extends RecyclerView.Adapter<ExerciseAdaptor.Exerci
 
     @Override
     public int getItemCount() {
-        return exercises.size();
+        return exercises == null ? 0 : exercises.size();
     }
 
-    public static class ExerciseViewHolder extends RecyclerView.ViewHolder {
+    public void setClickListener(ExerciseItemClickLIstener itemClickListener) {
+        this.clickListener = itemClickListener;
+    }
+
+    public  class ExerciseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView title;
         ImageView img;
         TextView body;
@@ -59,6 +65,13 @@ public class ExerciseAdaptor extends RecyclerView.Adapter<ExerciseAdaptor.Exerci
             title = (TextView) itemView.findViewById(R.id.exercise_title);
             img = (ImageView) itemView.findViewById(R.id.excercise_img) ;
             body = (TextView) itemView.findViewById(R.id.exercise_body);
+            itemView.setOnClickListener(this);
+        }
+
+
+        @Override
+        public void onClick(View view) {
+            if (clickListener != null) clickListener.onClick(view, getAdapterPosition());
         }
     }
 }

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".SingleExerciseActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@drawable/bg_exercise_round"
+     >
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/ic_arrow_forward_24dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layoutDirection="rtl"
+        >
+        <ImageView
+            android:id="@+id/singleExerciseImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pic0"
+            android:layout_weight="1"
+            android:tint="@color/blue"
+
+           />
+
+        <TextView
+            android:id="@+id/singleExerciseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="mozoo"
+            android:textColor="@color/khakestari" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/tabLayout"
+        android:background="@drawable/toolbar_dropshadow" />
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white2"
+        >
+
+
+        <TextView
+            android:id="@+id/singleExerciseDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="13dp"
+            android:text="چگونگی انجام :"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarCircle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/drawable_innercircle_time"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/drawable_circle_timer"
+            android:rotation="-90" />
+
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:05"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/bnazanin_farsi"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/imageViewReset"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textViewTime"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_reset_24dp"
+            />
+
+        <Button
+            android:id="@+id/imageViewStartStop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/progressBarCircle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_start_24dp" />
+    </RelativeLayout>
+</LinearLayout>
