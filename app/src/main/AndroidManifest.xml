@@ -11,11 +11,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SingleExerciseActivity"
-            android:label="@string/title_activity_single_exercise"
-
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".TimerDownCount"
             android:label="TimerDownCount"
 
             android:theme="@style/AppTheme.NoActionBar"></activity>
