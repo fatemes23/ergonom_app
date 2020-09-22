@@ -53,7 +53,7 @@ public class SingleExerciseActivity extends AppCompatActivity {
         String title =(String) bundle.get("exerciseTitle");
         textViewTitle.setText(title);
         String description =(String) bundle.get("exerciseDescription");
-        textViewDescription.setText("چگونگی انجام : "+description);
+        textViewDescription.setText("نحوه انجام : "+description);
         String idofexercise = (String) bundle.get("exerciseId");
         int[] myImageList = new int[]{R.drawable.pic0, R.drawable.pic1,R.drawable.pic2, R.drawable.pic3,R.drawable.pic4, R.drawable.pic5,
                 R.drawable.pic6, R.drawable.pic7,R.drawable.pic8, R.drawable.pic9,R.drawable.pic10, R.drawable.pic11,R.drawable.pic12, R.drawable.pic13};

@@ -17,7 +17,8 @@
     <color name="white">#FFFFFF</color>
     <color name="white2">#F6F6F6</color>
 
-    <color name="colorAccent">#f50057</color>
+    <!--<color name="colorAccent">#f50057</color>-->
+    <color name="colorAccent">#4169E1</color>
 
     <color name="c3">#03DAC5</color>
     <color name="black">#000</color>

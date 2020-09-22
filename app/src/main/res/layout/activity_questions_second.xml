@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstQuestionActivity"
+    android:gravity="center"
+    android:layoutDirection="rtl">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="روز های کاری خود را مشخص کنید:"></TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <Button
+                android:id="@+id/daybutton1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_workingday"
+                android:text="@string/day1"
+                android:textColor="@android:color/white"
+                />
+            <Button
+                android:id="@+id/daybutton2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_workingday"
+                android:text="@string/day2"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/daybutton3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_workingday"
+                android:text="@string/day3"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/daybutton4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_workingday"
+                android:text="@string/day4"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/daybutton5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_workingday"
+                android:text="@string/day5"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/daybutton6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_notworkingday"
+                android:text="@string/day6"
+                android:textColor="@color/colorAccent"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/daybutton7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_notworkingday"
+                android:text="@string/day7"
+                android:textColor="@color/colorAccent"
+                android:layout_marginRight="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layoutDirection="rtl"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="زمان کاری خود را مشخص کنید  "
+                android:layout_gravity="center"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/startJobTime"
+                ></EditText>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/endJobTime"
+                ></EditText>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="16dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="@drawable/bg_nextbutton"
+                android:textColor="@color/white"
+                android:text="@string/next"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:background="@drawable/bg_backbutton"
+                android:textColor="@color/colorAccent"
+                android:text="@string/back"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

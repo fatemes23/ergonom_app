@@ -6,11 +6,32 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="tabname1">ورزش های من</string>
-    <string name="tabname2">اطلاعات</string>
-
-
     <string name="hint_minute">Minute</string>
     <string name="message_minutes">Please Enter Minutes...</string>
     <string name="title_activity_single_exercise">SingleExerciseActivity</string>
+    <string name="tabname1">ورزش های من</string>
+    <string name="tabname2">اطلاعات</string>
+    <string name="welcomeInfirstQuestion">به ارگونوم خوش آمدید. </string>
+    <string name="typeOfJob"> نوع شغل خود را انتخاب کنید. </string>
+    <string name="durationofreminder">مدت زمان یادآور برنامه را انتخاب کنید.</string>
+    <string name="standing">ایستاده</string>
+    <string name="sitting">نشسته</string>
+    <string name="next">بعدی</string>
+    <string name="back">قبلی</string>
+    <string name="explain_sit_stand">شما میتوانید بسته به نوع شغل خود یکی از حالت ها یا هر دوی آن ها را انتخاب کنید.</string>
+    <string name="startJobTime"> زمان شروع کار</string>
+    <string name="endJobTime"> زمان پایان کار </string>
+    <string name="day1">ش</string>
+    <string name="day2">ی</string>
+    <string name="day3">د</string>
+    <string name="day4">س</string>
+    <string name="day5">چ</string>
+    <string name="day6">پ</string>
+    <string name="day7">ج</string>
+    <string name="painquestion">آیا شما گردن‌درد کمردرد \nیا درد‌ اندام‌تحتانی یا اندام‌فوقانی دارید ؟</string>
+    <string name="reminder_text">زمان یاآور‌های برنامه را انتخاب کنيد.  </string>
+    <string name="reminder_warning">.لطفا زمان یادآورها را بین ۳۰دقیقه تا ۶۰ دقیقه وارد کنید</string>
+    <string name="reminder_advise">باتوجه درد در اندام بهتر است زمان ۳۰ دقیقه را انتخاب کنید.</string>
+
+
 </resources>
