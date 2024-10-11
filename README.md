@@ -1,4 +1,4 @@
-Features :
+## Features 
 
 Set reminders for ergonomic exercises throughout the day.
 
